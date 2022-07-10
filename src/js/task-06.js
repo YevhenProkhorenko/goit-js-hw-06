@@ -1,12 +1,12 @@
-const textInput = document.querySelector("#validation-input");
-const borderInput = document.querySelector()
-const setTheFocus = () => {
-    textInput.focus();
-}
-const setTheBlur = () => {
-    textInput.blur();
-    if (textInput === textInput.dataset.length) {
-        
+const textInput = document.querySelector("input");
+const inputLength = parseInt(textInput.dataset.length);
+
+function changeBorderColor(event) {
+    if (event.currentTarget.value.length <= inputLength) {
+        event.currentTarget.classList.add('valid');        
+    }
+    else {
+        event.currentTarget.classList.add('invalid');    
     }
 }
-textInput.addEventListener("click", setTheFocus);
+textInput.addEventListener("blur", changeBorderColor);
