@@ -18,4 +18,4 @@ const imgItem = images.map(image => {
 return `<li><img src="${image.url}" alt="${image.alt}"></li>`
 });
 gallery.insertAdjacentHTML("afterbegin", imgItem)
-console.log(imgItem);
+gallery.setAttribute("style", "list-style-type:none; display: flex; flex-direction: column-reverse; ");
