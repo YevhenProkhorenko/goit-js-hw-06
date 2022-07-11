@@ -4,6 +4,6 @@ console.log('Number of categories:', categories.length);
     const elementTitle = category.querySelector('h2');
     console.log('Category:', elementTitle.textContent);
     
-    const Number = category.querySelectorAll('li')    
-    console.log('Elements:', Number.length)
+    const numbersOfElement = category.querySelectorAll('li')    
+    console.log('Elements:', numbersOfElement.length)
 });
