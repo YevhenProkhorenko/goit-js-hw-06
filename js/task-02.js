@@ -7,14 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 const listEl = document.querySelector('ul')
-const addEl = [];
+
 
 const itemList = ingredients.map(ingredient => {
-  const createEl = document.createElement('li');
-  addEl.push(createEl);
+  const createEl = document.createElement('li');  
   createEl.textContent = ingredient;
-  createEl.classList.add('item');  
+  createEl.classList.add('item');
+  return createEl;
 });
-listEl.append(...addEl);
+listEl.append(...itemList);
 
 
